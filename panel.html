@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel de Control</title>
+</head>
+<body>
+
+<h2>Panel de Control</h2>
+
+<!-- Botones del panel -->
+<button onclick="accion('iniciar')">Iniciar</button>
+<button onclick="accion('detener')">Detener</button>
+<button onclick="accion('reiniciar')">Reiniciar</button>
+
+<!-- Aquí se mostrará la respuesta -->
+<p id="respuesta"></p>
+
+<script>
+function accion(comando){
+    let respuesta = "";
+
+    if(comando === "iniciar"){
+        respuesta = "Proceso iniciado";
+    } else if(comando === "detener"){
+        respuesta = "Proceso detenido";
+    } else if(comando === "reiniciar"){
+        respuesta = "Proceso reiniciado";
+    } else {
+        respuesta = "Comando no reconocido";
+    }
+
+    document.getElementById("respuesta").innerText = respuesta;
+}
+</script>
+
+</body>
+</html>
